@@ -6,4 +6,5 @@ package com.itgaoshu.bean;
  */
 public class addHospital {
     private  int hid;
+
 }
