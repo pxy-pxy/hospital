@@ -1,4 +1,4 @@
-package com.itgaoshu.dao;
+package com.itgaoshu.Mapper;
 
 import com.itgaoshu.bean.*;
 import org.apache.ibatis.annotations.Mapper;

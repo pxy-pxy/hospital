@@ -1,4 +1,4 @@
-package com.itgaoshu.dao;
+package com.itgaoshu.Mapper;
 
 import com.itgaoshu.bean.Departments;
 import com.itgaoshu.bean.Doctor;

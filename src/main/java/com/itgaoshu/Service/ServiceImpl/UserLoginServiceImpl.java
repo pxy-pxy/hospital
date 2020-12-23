@@ -3,8 +3,7 @@ package com.itgaoshu.Service.ServiceImpl;
 import com.itgaoshu.Service.UserLoginService;
 import com.itgaoshu.bean.Menu;
 import com.itgaoshu.bean.UserLogin;
-import com.itgaoshu.mapper.UserLoginMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.itgaoshu.Mapper.UserLoginMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

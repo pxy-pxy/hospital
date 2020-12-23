@@ -36,4 +36,5 @@ public class WarehuoseController {
     /*
      * 查询仓库
      * */
+
 }

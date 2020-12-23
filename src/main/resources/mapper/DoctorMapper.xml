@@ -2,7 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.itgaoshu.dao.DoctorMapper">
+<mapper namespace="com.itgaoshu.Mapper.DoctorMapper">
  <select id="doctorList" resultType="doctor">
      select* from doctor d,departments de,registeredtype r where d.departmentId=de.departmentId and d.registeredId=r.registeredId
          <if test="doctorName!=null and doctorName!=''">

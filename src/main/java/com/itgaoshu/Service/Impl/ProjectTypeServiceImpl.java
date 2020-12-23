@@ -1,9 +1,8 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.*;
-import com.itgaoshu.dao.ProjectTypeMapper;
+import com.itgaoshu.Mapper.ProjectTypeMapper;
 import com.itgaoshu.service.ProjectTypeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

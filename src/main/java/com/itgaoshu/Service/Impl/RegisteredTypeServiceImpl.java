@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.Registeredtype;
-import com.itgaoshu.dao.RegisteredTypeMapper;
+import com.itgaoshu.Mapper.RegisteredTypeMapper;
 import com.itgaoshu.service.RegisteredTypeService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

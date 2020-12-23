@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.Departments;
-import com.itgaoshu.dao.DepartmentMapper;
+import com.itgaoshu.Mapper.DepartmentMapper;
 import com.itgaoshu.service.DepartmentService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

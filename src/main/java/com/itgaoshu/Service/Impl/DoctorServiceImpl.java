@@ -3,12 +3,11 @@ package com.itgaoshu.service.Impl;
 import com.itgaoshu.bean.Departments;
 import com.itgaoshu.bean.Doctor;
 import com.itgaoshu.bean.Registeredtype;
-import com.itgaoshu.dao.DoctorMapper;
+import com.itgaoshu.Mapper.DoctorMapper;
 import com.itgaoshu.service.DoctorService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service

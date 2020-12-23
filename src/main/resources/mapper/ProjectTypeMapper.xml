@@ -2,7 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.itgaoshu.dao.PrjectTypeMapper">
+<mapper namespace="com.itgaoshu.Mapper.PrjectTypeMapper">
     <!--  项目大类增删改查开始   -->
 <select id="findAllProjecttype" resultType="projecttype">
      select *from projecttype

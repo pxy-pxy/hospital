@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.Warehuose;
-import com.itgaoshu.dao.WarehuoseMapper;
+import com.itgaoshu.Mapper.WarehuoseMapper;
 import com.itgaoshu.service.WarehuoseService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

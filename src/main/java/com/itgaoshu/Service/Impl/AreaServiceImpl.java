@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.Area;
-import com.itgaoshu.dao.AreaMapper;
+import com.itgaoshu.Mapper.AreaMapper;
 import com.itgaoshu.service.AreaService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,9 +1,8 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.Unit;
-import com.itgaoshu.dao.UnitMapper;
+import com.itgaoshu.Mapper.UnitMapper;
 import com.itgaoshu.service.UnitService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

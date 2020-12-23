@@ -1,4 +1,4 @@
-package com.itgaoshu.dao;
+package com.itgaoshu.Mapper;
 
 import com.itgaoshu.bean.Warehuose;
 import org.apache.ibatis.annotations.Mapper;
