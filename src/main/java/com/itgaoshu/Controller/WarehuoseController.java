@@ -33,4 +33,7 @@ public class WarehuoseController {
         return tableData;
 
     }
+    /*
+     * 查询仓库
+     * */
 }
