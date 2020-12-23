@@ -9,6 +9,7 @@ import java.util.List;
  * @author Tan
  * @create 2020-12-22 15:08
  */
+@Mapper
 public interface CashierMapper {
     //查询患者所有信息
     List<ReportVo> sel();
