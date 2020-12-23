@@ -64,5 +64,18 @@ public class Doctor {
     public void setDstate(Integer dstate) {
         this.dstate = dstate;
     }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "doctorId=" + doctorId +
+                ", doctorNamr='" + doctorNamr + '\'' +
+                ", departmentId=" + departmentId +
+                ", department='" + department + '\'' +
+                ", registeredId=" + registeredId +
+                ", type='" + type + '\'' +
+                ", dstate=" + dstate +
+                '}';
+    }
 }
 
