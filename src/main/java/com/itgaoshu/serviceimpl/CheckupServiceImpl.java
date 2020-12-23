@@ -1,7 +1,7 @@
 package com.itgaoshu.serviceimpl;
 
 import com.itgaoshu.bean.Checkup;
-import com.itgaoshu.dao.CheckupMapper;
+import com.itgaoshu.mapper.CheckupMapper;
 import com.itgaoshu.service.CheckupService;
 
 import javax.annotation.Resource;

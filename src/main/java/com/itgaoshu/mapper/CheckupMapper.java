@@ -1,4 +1,4 @@
-package com.itgaoshu.dao;
+package com.itgaoshu.mapper;
 
 import com.itgaoshu.bean.Checkup;
 

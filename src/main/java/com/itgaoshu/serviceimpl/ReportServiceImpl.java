@@ -1,7 +1,7 @@
 package com.itgaoshu.serviceimpl;
 
 import com.itgaoshu.bean.*;
-import com.itgaoshu.dao.ReportMapper;
+import com.itgaoshu.mapper.ReportMapper;
 import com.itgaoshu.service.ReportService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
