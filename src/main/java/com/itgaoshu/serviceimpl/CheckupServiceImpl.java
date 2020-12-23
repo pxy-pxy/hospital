@@ -4,6 +4,7 @@ import com.itgaoshu.bean.Checkup;
 import com.itgaoshu.mapper.CheckupMapper;
 import com.itgaoshu.service.CheckupService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * @create 2020-12-23 9:26
  */
 @Service
+@Transactional
 public class CheckupServiceImpl implements CheckupService {
     @Resource
     private CheckupMapper checkupMapper;
