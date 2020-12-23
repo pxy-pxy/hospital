@@ -10,7 +10,7 @@ import java.util.List;
  * @create 2020-12-22 15:08
  */
 public interface CashierMapper {
-    //查询挂号的所有信息用于页面表格展示
+    //查询患者所有信息
     List<ReportVo> sel();
     //查询所有药房
     List<Warehuose> selware();
@@ -20,7 +20,7 @@ public interface CashierMapper {
     Integer selcadr(Cashier cashier);
     //添加处方药品
     Integer addchu(Cashier cashier);
-    //如果有该药品则改变该药品的数量
+    //如果有该药品则改变药品的数量
     Integer updchu(Cashier cashier);
     //查询该用户的处方
     List<Cashier> selpepi(Integer perid);
@@ -32,7 +32,7 @@ public interface CashierMapper {
     Integer adddrunum(Pharmacy pharmacy);
     //模糊查询
     List<ReportVo> mohu(ReportVo reportVo);
-    //修改用户的病例
+    //修改用户的病情
     Integer addbing(Report report);
     //查询用户有没有病例
     String selbing(Integer rid);
