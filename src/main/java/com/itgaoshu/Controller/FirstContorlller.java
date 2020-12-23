@@ -2,7 +2,6 @@ package com.itgaoshu.Controller;
 
 import com.itgaoshu.Service.ServiceImpl.UserLoginServiceImpl;
 import com.itgaoshu.Service.UserLoginService;
-import com.itgaoshu.bean.JsonRes;
 import com.itgaoshu.bean.Menu;
 import com.itgaoshu.bean.TreeNode;
 import com.itgaoshu.bean.UserLogin;
@@ -116,23 +115,6 @@ public String login2(String loginname, String pwd, Model model,HttpSession sessi
         }
         return treeNodes;
     }
-    @ResponseBody
-    @RequestMapping("jr")//J.R.Simth
-    public JsonRes review(){
-        List<Menu> list = userLoginService.getMenu1();//获得所有的菜单管理的左侧叶面
-        List<TreeNode> nodes = new ArrayList<>();
-        for (Menu menus : list) {
-            Integer id = menus.getId();
-            Integer pid = menus.getPid();
-            String title = menus.getTitle();
-            String icon = menus.getIcon();
-            String href = menus.getHref();
-            Boolean spread = menus.getSpread() == true;
-            String target = menus.getTarget();
-            nodes.add(new TreeNode(id, pid, title, icon, href, spread, target));
-        }
-        return new JsonRes(nodes);
 
-    }
 }
 

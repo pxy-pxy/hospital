@@ -1,7 +1,7 @@
 package com.itgaoshu.bean;
-
+//排班
 public class Paiban {
-    private Integer paiId;
+    private Integer paiId;//排班id
     private String one;
     private String two;
     private String three;
@@ -9,8 +9,8 @@ public class Paiban {
     private String five;
     private String six;
     private String seven;
-    private Integer doctorId;
-    private String doctorName;
+    private Integer doctorId;//医生id
+    private String doctorName;//医生姓名
 
     public Integer getPaiId() {
         return paiId;

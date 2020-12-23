@@ -24,11 +24,4 @@ public class UserLoginServiceImpl implements UserLoginService {
     public List<Menu> getMenu(int id){
         return userLoginMapper.getMenu(id);
     }
-
-    @Override
-    public List<Menu> getMenu1() {
-        return userLoginMapper.getMenu1();
-    }
-
-
 }
