@@ -9,7 +9,6 @@ import java.util.List;
  * @author Tan
  * @create 2020-12-21 15:38
  */
-@Mapper
 public interface ReportMapper {
     //查询挂号的所有信息
     List<ReportVo> sel(ReportVo reportVo);

@@ -9,7 +9,6 @@ import java.util.List;
  * @author Tan
  * @create 2020-12-22 15:08
  */
-@Mapper
 public interface CashierMapper {
     //查询挂号的所有信息用于页面表格展示
     List<ReportVo> sel();
