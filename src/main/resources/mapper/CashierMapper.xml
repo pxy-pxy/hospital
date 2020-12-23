@@ -1,0 +1,115 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itgaoshu.mapper.CashierMapper">
+
+    <!--查询所有患者-->
+    <select id="sel" resultType="ReportVo">
+        select r.reportId,r.reportName,r.carid,r.phone,r.sex,r.price,r.age,p.department,d.doctorName,r.price,e.type,r.time,r.users,r.state,e.registeredid dregisteredid,d.doctorid ddoctorid,p.departmentId ddepartmentid
+            from  report r,doctor d,registeredtype e,departments p
+            where r.doctor=d.doctorId
+            and d.registeredid=e.registeredId
+            and  r.department=p.departmentId and r.state=1 and DATE_FORMAT(r.time,'%Y-%m-%d')=DATE_FORMAT(now(),"%Y-%m-%d") order by r.reportid desc
+    </select>
+
+    <!--查询所有药房-->
+    <select id="selware" resultType="Warehuose">
+        select * from warehuose
+    </select>
+
+    <!--查询所有药品信息-->
+    <select id="selpharm" resultType="Pharmacy" parameterType="pharmacy">
+        select p.*,u.unitName unitName from pharmacy p ,unit u where p.unit=u.unitId
+        <if test="pharmacyName!=null and pharmacyName!=''">
+            and  p.pharmacyName like concat('%' ,concat(#{pharmacyName},'%'))
+        </if>
+    </select>
+
+    <!--查询这个用户的处方表上有没有这个-->
+    <select id="selcadr" resultType="Integer" parameterType="Cashier">
+        select * from cashier where reportId=#{reportId} and durgname=#{durgname}
+    </select>
+
+    <!--添加处方药品-->
+    <insert id="addchu" parameterType="Cashier">
+        insert into cashier (reportId,durgname,durgnum,repiceprice,repicetotal,state,ctime)
+        values (#{reportId},#{durgname},#{durgnum},#{repiceprice},#{repicetotal},0,now())
+    </insert>
+
+    <!--如果有该药品则增加药品的数量-->
+    <update id="updchu" parameterType="Cashier">
+        update cashier set durgnum = durgnum+#{durgnum},repicetotal=repicetotal+#{repicetotal} where durgname = #{durgname}
+    </update>
+
+    <!--查询该用户的处方-->
+    <select id="selpepi" resultType="Cashier" parameterType="Integer">
+        select * from cashier where reportId=#{perid} and state =0
+    </select>
+
+    <!--删除处方中的药品-->
+    <delete id="del" parameterType="Cashier">
+        delete from cashier where cashier = #{cashier}
+    </delete>
+
+    <!--减少药方中药品的数量-->
+    <update id="deldrunum" parameterType="Pharmacy">
+        update pharmacy set drugstorenum = drugstorenum-#{drugstorenum} where pharmacyName = #{pharmacyName}
+    </update>
+
+    <!--添加药品的数量-->
+    <update id="adddrunum" parameterType="Pharmacy">
+         update pharmacy set drugstorenum = drugstorenum+#{drugstorenum} where pharmacyName = #{pharmacyName}
+    </update>
+
+    <!--模糊查询-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--修改用户的病情-->
+    <update id="addbing" parameterType="Report">
+      update report set zhuan = #{zhuan} where reportId = #{reportId}
+    </update>
+
+    <!--查询用户有没有病例-->
+    <select id="selbing" resultType="String" parameterType="Integer">
+      select zhuan from report where reportId=#{rid}
+    </select>
+
+    <!--查询用户做项目的结果-->
+    <select id="lookbing" parameterType="Integer" resultType="String">
+       select jie from cashier where  cashier=#{cashier};
+    </select>
+
+    <!--查询该用户是否还未有未交钱的项目-->
+    <select id="seljiao" parameterType="int" resultType="int">
+        select count(mstate) from cashier where reportId=#{reid} and mstate=0 and state=1
+    </select>
+
+    <!--查询该用户有几个已经交过钱的项目-->
+    <select id="selyi" parameterType="Integer" resultType="Integer">
+    select count(jie) from cashier where reportId=#{reid} and jie!='' and mstate=1 and ostate=1
+    </select>
+
+    <!--查询用户所有的处方-->
+    <select id="selall" resultType="Cashier" parameterType="Integer">
+        select * from cashier where reportId=#{perid} and state !=2
+    </select>
+
+    <!--查询用户项目的处方-->
+    <select id="selximu" resultType="Cashier" parameterType="Integer">
+        select * from cashier where reportId=#{perid} and state =1
+    </select>
+</mapper>
