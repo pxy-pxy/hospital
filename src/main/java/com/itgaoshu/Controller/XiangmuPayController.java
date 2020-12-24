@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * @author Tan
- * @create 2020-12-23 17:20
+ * @create 2020-12-23 22:34
  */
 @Controller
 @RequestMapping("xpay")
@@ -25,52 +25,56 @@ public class XiangmuPayController {
     //进入项目收费页面
     @RequestMapping("xiangpay")
     public String xiangpay(){
-        return "cao/xaingmupay";
+        return "cao/xiangmupay";
     }
-    //选择患者后对该患者的项目进行查询
+    //选择患者后对患者的项目进行检查
     @RequestMapping("selxiang")
     @ResponseBody
     public Object selxiang(Integer page,Integer limit,Integer perid){
-        PageHelper.startPage(page, limit);
-        List<Cashier> mohu = xiangmuPayService.selxiang(perid);
+        PageHelper.startPage(page,limit);
+        List<Cashier> mohu=xiangmuPayService.selxiang(perid);
         PageInfo pageInfo = new PageInfo(mohu);
-        Map<String, Object> tableData = new HashMap<String, Object>();
-        //这是layui要求返回的json数据格式，如果后台没有加上这句话的话需要在前台页面手动设置
-        tableData.put("code", 0);
-        tableData.put("msg", "");
-        //将全部数据的条数作为count传给前台（一共多少条）
-        tableData.put("count", pageInfo.getTotal());
-        //将分页后的数据返回（每页要显示的数据）
-        tableData.put("data", pageInfo.getList());
+        Map<String , Object> tableData = new HashMap<String , Object>();
+        //这是layui要求返回的json数据格式,如果后台没有加上这句话需要在前台页面手动设置
+        tableData.put("code",0);
+        tableData.put("msg","");
+        //将全部数据作为count传给前台
+        tableData.put("count",pageInfo.getTotal());
+        //将分页后的数据返回每页要显示的数据
+        tableData.put("data",pageInfo.getList());
         return tableData;
     }
-    //点击确认收费前确定该患者有没有收费项目
+
+    //点击确认收费前如确定该患者有没有收费项目
     @RequestMapping("selshoux")
     @ResponseBody
     public Object selshoux(Integer perid){
-        Integer selshoux = xiangmuPayService.selshoux(perid);
-        return  selshoux;
+        Integer selshoux=xiangmuPayService.selshoux(perid);
+        return selshoux;
     }
-    //项目缴费修改项目的收费状态
+
+    //项目缴费后修改项目的收费状态
     @RequestMapping("shoufei")
     @ResponseBody
     public Object shoufei(Integer perid){
-        Integer updxiang = xiangmuPayService.updxiang(perid);
-        return updxiang;
+        Integer updxiang=xiangmuPayService.updxiang(perid);
+        return  updxiang;
     }
+
     //进入项目检查页面
     @RequestMapping("seljian")
     public Object seljian(){
         return "cao/jiancha";
     }
-    //查询该用户的所有要检查的项目
+
+    //查询用户所有要检查的项目
     @RequestMapping("selcha")
     @ResponseBody
     public Object selcha(Integer page,Integer limit,Integer perid){
-        PageHelper.startPage(page, limit);
+        PageHelper.startPage(page,limit);
         List<Cashier> selcha = xiangmuPayService.selcha(perid);
         PageInfo pageInfo = new PageInfo(selcha);
-        Map<String, Object> tableData = new HashMap<String, Object>();
+        Map<String,Object> tableData=new HashMap<String,Object>();
         //这是layui要求返回的json数据格式，如果后台没有加上这句话的话需要在前台页面手动设置
         tableData.put("code", 0);
         tableData.put("msg", "");
@@ -89,5 +93,5 @@ public class XiangmuPayController {
         cashier.setCashier(ccashier);
         Integer addjie = xiangmuPayService.addjie(cashier);
         return addjie;
-    }
+     }
 }

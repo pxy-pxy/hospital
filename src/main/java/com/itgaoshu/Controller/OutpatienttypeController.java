@@ -31,7 +31,7 @@ public class OutpatienttypeController {
     public Object xiang(Model model){
         return  "cao/Cxiangmu";
     }
-    //进入收费页面
+    //进入收费页面//药品缴费
     @RequestMapping("out")
     public Object look(Model model){
         return  "cao/Ctoll";
