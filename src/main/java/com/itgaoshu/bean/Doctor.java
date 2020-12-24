@@ -2,7 +2,7 @@ package com.itgaoshu.bean;
 
 public class Doctor {
     private Integer doctorId;//医生id
-    private String doctorNamr;//医生姓名
+    private String doctorName;//医生姓名
     private  Integer departmentId;//科室id
     private String department;//科室名称
     private Integer registeredId;//挂号类型
@@ -17,12 +17,12 @@ public class Doctor {
         this.doctorId = doctorId;
     }
 
-    public String getDoctorNamr() {
-        return doctorNamr;
+    public String getDoctorName() {
+        return doctorName;
     }
 
-    public void setDoctorNamr(String doctorNamr) {
-        this.doctorNamr = doctorNamr;
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
     public Integer getDepartmentId() {
@@ -69,7 +69,7 @@ public class Doctor {
     public String toString() {
         return "Doctor{" +
                 "doctorId=" + doctorId +
-                ", doctorNamr='" + doctorNamr + '\'' +
+                ", doctorNamr='" + doctorName + '\'' +
                 ", departmentId=" + departmentId +
                 ", department='" + department + '\'' +
                 ", registeredId=" + registeredId +

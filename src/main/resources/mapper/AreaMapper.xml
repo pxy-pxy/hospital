@@ -17,6 +17,6 @@
         delete from Area where areaId=#{areaId}
     </delete>
     <select id="count" resultType="int">
-        select count (*) from Area where areaName+#{areaName}
+        select count (*) from Area where areaName=#{areaName}
     </select>
 </mapper>

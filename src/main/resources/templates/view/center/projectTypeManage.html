@@ -439,7 +439,7 @@
 //渲染数据表格
         tableIns=table.render({
             elem: '#projecttypeTable'   //渲染的目标对象
-            ,url:'prjectType/findAllProjecttype' //数据接口
+            ,url:'ProjectType/findAllProjecttype' //数据接口
             ,title: '用户数据表'//数据导出来的标题
             ,toolbar:"#projecttypeToolBar"   //表格的工具条
             ,height:'full-245'
@@ -455,7 +455,7 @@
         $("#doSearch54321").click(function(){
             var params=$("#searchFrm54321").serialize();
             tableIns.reload({
-                url:"prjectType/findAllProjecttype?"+params
+                url:"ProjectType/findAllProjecttype?"+params
             })
         });
 
@@ -495,7 +495,7 @@
                 success:function(index){
                     //清空表单数据
                     $("#dataFrm54321")[0].reset();
-                    url="prjectType/addProjecttype";
+                    url="ProjectType/addProjecttype";
                 }
             });
         }
@@ -527,7 +527,7 @@
         //渲染数据表格
         tableIns2=table.render({
             elem: '#bedTable'   //渲染的目标对象
-            ,url:'prjectType/findAllBed' //数据接口
+            ,url:'ProjectType/findAllBed' //数据接口
             ,title: '用户数据表'//数据导出来的标题
             ,toolbar:"#bedToolBar"   //表格的工具条
             ,height:'full-255'
@@ -546,7 +546,7 @@
         $("#doSearch5432").click(function(){
             var params=$("#searchFrm5432").serialize();
             tableIns2.reload({
-                url:"prjectType/findAllBed?"+params
+                url:"ProjectType/findAllBed?"+params
             })
         });
 
@@ -588,7 +588,7 @@
                 success:function(index){
                     //清空表单数据
                     $("#dataFrm5432")[0].reset();
-                    url="prjectType/addBed";
+                    url="ProjectType/addBed";
                 }
             });
         }
@@ -601,7 +601,7 @@
                 area:['400px','400px'],
                 success:function(index){
                     form.val("dataFrm5432",data);
-                    url="prjectType/editBed";
+                    url="ProjectType/editBed";
                 }
             });
         }
@@ -619,7 +619,7 @@
         });
         //初始化添加or修改到下拉框中的值
         $.ajax({
-            url: 'prjectType/departmentList',
+            url: 'ProjectType/departmentList',
             dataType: 'json',
             type: 'post',
             success: function (data) {
@@ -645,7 +645,7 @@
         //渲染数据表格
         tableIns3=table.render({
             elem: '#moneytypeTable'   //渲染的目标对象
-            ,url:'prjectType/findAllMoneytype' //数据接口
+            ,url:'ProjectType/findAllMoneytype' //数据接口
             ,title: '用户数据表'//数据导出来的标题
             ,toolbar:"#moneytypeToolBar"   //表格的工具条
             ,height:'full-255'
@@ -663,7 +663,7 @@
         $("#doSearch543").click(function(){
             var params=$("#searchFrm543").serialize();
             tableIns3.reload({
-                url:"prjectType/findAllMoneytype?"+params
+                url:"ProjectType/findAllMoneytype?"+params
             })
         });
 
@@ -705,7 +705,7 @@
                 success:function(index){
                     //清空表单数据
                     $("#dataFrm543")[0].reset();
-                    url="prjectType/addMoneytype";
+                    url="ProjectType/addMoneytype";
                 }
             });
         }
@@ -718,7 +718,7 @@
                 area:['380px','300px'],
                 success:function(index){
                     form.val("dataFrm543",data);
-                    url="prjectType/editMoneytype";
+                    url="ProjectType/editMoneytype";
                 }
             });
         }
@@ -752,7 +752,7 @@
         //渲染数据表格
         tableIns4=table.render({
             elem: '#outpatienttypeTable'   //渲染的目标对象
-            ,url:'prjectType/findAllOutpatienttype' //数据接口
+            ,url:'ProjectType/findAllOutpatienttype' //数据接口
             ,title: '用户数据表'//数据导出来的标题
             ,toolbar:"#outpatienttypeToolBar"   //表格的工具条
             ,height:'full-255'
@@ -775,7 +775,7 @@
         $("#doSearch54").click(function(){
             var params=$("#searchFrm54").serialize();
             tableIns4.reload({
-                url:"prjectType/findAllOutpatienttype?"+params
+                url:"ProjectType/findAllOutpatienttype?"+params
             })
         });
 
@@ -794,7 +794,7 @@
             if(layEvent === 'del'){ //删除
                 layer.confirm('真的删除【'+data.projectName+'】这个收费项吗', function(index){
                     //向服务端发送删除指令
-                    $.post("prjectType/deleteOutpatienttype",{outpatientId:data.outpatientId},function(res){
+                    $.post("ProjectType/deleteOutpatienttype",{outpatientId:data.outpatientId},function(res){
                         layer.msg(res);
                         //刷新数据 表格
                         tableIns4.reload();
@@ -830,7 +830,7 @@
                 area:['500px','500px'],
                 success:function(index){
                 form.val("dataFrm54",data);
-                    url="prjectType/editOutpatienttype";
+                    url="ProjectType/editOutpatienttype";
                 }
             });
         }
@@ -849,7 +849,7 @@
 
         //初始化添加or修改到下拉框中的值
         $.ajax({
-            url: 'prjectType/findAllProjecttype1',
+            url: 'ProjectType/ProjecttypeList',
             dataType: 'json',
             type: 'post',
             success: function (data) {
@@ -860,7 +860,7 @@
             }
         })
         $.ajax({
-            url: 'prjectType/findAllUnit',
+            url: 'ProjectType/UnitList',
             dataType: 'json',
             type: 'post',
             success: function (data) {
@@ -884,7 +884,7 @@
         //渲染数据表格
         tableIns5=table.render({
             elem: '#inoutpatienttypeTable'   //渲染的目标对象
-            ,url:'prjectType/findAllInoutpatienttype' //数据接口
+            ,url:'ProjectType/findAllInoutpatienttype' //数据接口
             ,title: '用户数据表'//数据导出来的标题
             ,toolbar:"#inoutpatienttypeToolBar"   //表格的工具条
             ,height:'full-255'
@@ -904,7 +904,7 @@
         $("#doSearch5").click(function(){
             var params=$("#searchFrm5").serialize();
             tableIns5.reload({
-                url:"prjectType/findAllInoutpatienttype?"+params
+                url:"ProjectType/findAllInoutpatienttype?"+params
             })
         });
 
@@ -981,7 +981,7 @@
 
         //初始化添加or修改到下拉框中的值
         $.ajax({
-            url: 'prjectType/findAllProjecttype2',
+            url: 'ProjectType/ProjecttypeList2',
             dataType: 'json',
             type: 'post',
             success: function (data) {
@@ -992,7 +992,7 @@
             }
         })
         $.ajax({
-            url: 'prjectType/findAllUnit1',
+            url: 'ProjectType/UnitList1',
             dataType: 'json',
             type: 'post',
             success: function (data) {

@@ -158,7 +158,7 @@ public class ProjectTypeController {
      * 住院收费项
      *
      * */
-    @RequestMapping()
+    @RequestMapping("/findAllInoutpatienttype")
     @ResponseBody
     public Object findAllInoutpatienttype(Inoutpatienttype inoutpatienttype,@RequestParam(defaultValue = "1",required = true)Integer page,Integer limit){
         PageHelper.startPage(page,limit);

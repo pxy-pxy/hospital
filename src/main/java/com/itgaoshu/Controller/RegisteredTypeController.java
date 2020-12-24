@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("RegisteredType")
+@RequestMapping("registeredType")
 public class RegisteredTypeController {
     @Autowired
     private RegisteredTypeService registeredTypeService;
@@ -35,7 +35,7 @@ public class RegisteredTypeController {
 
     }
     //添加挂号类型
-    @RequestMapping("addRegisteredType")
+    @RequestMapping("/addRegisteredType")
     @ResponseBody
     public Object addRegisteredType (Registeredtype registeredtype){
         int count = registeredTypeService.count(registeredtype);
@@ -51,7 +51,7 @@ public class RegisteredTypeController {
         }
     }
     //修改挂号类型
-    @RequestMapping("editRegisteredType")
+    @RequestMapping("/editRegisteredType")
     @ResponseBody
     public Object editRegisteredType(Registeredtype registeredtype){
         int i = registeredTypeService.editRegisteredType(registeredtype);
@@ -63,7 +63,7 @@ public class RegisteredTypeController {
 
     }
     //删除挂号类型
-    @RequestMapping("deleteType")
+    @RequestMapping("/deleteType")
     @ResponseBody
     public  Object deleteType (Integer registeredId){
         int i = registeredTypeService.deleteType(registeredId);

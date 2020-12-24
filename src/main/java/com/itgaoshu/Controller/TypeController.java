@@ -22,7 +22,7 @@ public class TypeController {
     /*
      * 查询药品类型
      * */
-    @RequestMapping("findAllType")
+    @RequestMapping("/findAllType")
     @ResponseBody
     public Object TypeList(Type type, Integer page, Integer limit){
         PageHelper.startPage(page, limit);
@@ -42,7 +42,7 @@ public class TypeController {
     /*
      * 添加药品类型
      * */
-    @RequestMapping("addType")
+    @RequestMapping("/addType")
     @ResponseBody
     public Object addType(Type type){
         int count = typeService.count(type);
@@ -62,7 +62,7 @@ public class TypeController {
     /*
      * 删除药品类型
      * */
-    @RequestMapping("deleteType")
+    @RequestMapping("/deleteType")
     @ResponseBody
     public Object deleteType(Integer typeId){
         int i = typeService.deleteType(typeId);

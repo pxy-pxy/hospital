@@ -23,7 +23,7 @@ public class AreaController {
     /*
     * 查询生产地址
     * */
-    @RequestMapping("/AreaList.do")
+    @RequestMapping("AreaList.do")
     @ResponseBody
     public Object AreaList(Area area, @RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
         PageHelper.startPage(page ,limit);
@@ -40,7 +40,7 @@ public class AreaController {
     /*
     * 添加生产地址
     * */
-    @RequestMapping("/addArea.do")
+    @RequestMapping("addArea.do")
     @ResponseBody
     public Object addArea(Area area){
         int count = areaService.count(area);
@@ -58,7 +58,7 @@ public class AreaController {
     /*
     * 删除
     * */
-    @RequestMapping("/deleteArea.do")
+    @RequestMapping("deleteArea.do")
     @ResponseBody
     public Object deleteArea(Integer areaId){
         int i = areaService.deleteArea(areaId);

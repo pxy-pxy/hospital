@@ -57,6 +57,7 @@ public class WarehuoseController {
     /*
     * 删除仓库
     * */
+    @RequestMapping("deleteWarehuose")
     @ResponseBody
     public Object deleteWarehuose(Integer warehouseId){
         int i = warehuoseService.deleteWarehuose(warehouseId);

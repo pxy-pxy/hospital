@@ -4,7 +4,7 @@ public class Drugdictionary {
      private Integer drugId;
      private String drugName;
      private Integer unitId;
-     private Doctor sellingPrice;
+     private double sellingPrice;
      private  Integer areaId;
      private  Integer typeId;
      private  Integer exprationDate;
@@ -36,11 +36,11 @@ public class Drugdictionary {
         this.unitId = unitId;
     }
 
-    public Doctor getSellingPrice() {
+    public double getSellingPrice() {
         return sellingPrice;
     }
 
-    public void setSellingPrice(Doctor sellingPrice) {
+    public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
 

@@ -1,4 +1,4 @@
-package com.itgaoshu.Service.ServiceImpl;
+package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.Service.UserLoginService;
 import com.itgaoshu.bean.Menu;
@@ -10,9 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.List;
 
-
-@Transactional
 @Service
+@Transactional
+
 public class UserLoginServiceImpl implements UserLoginService {
     @Resource
     private UserLoginMapper userLoginMapper;

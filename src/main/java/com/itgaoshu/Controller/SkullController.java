@@ -54,7 +54,7 @@ public class SkullController {
      * 删除经办人
      * */
    @ResponseBody
-   @RequestMapping("deleteSkull")
+   @RequestMapping("/deleteSkull")
     public Object deleteSkull(Integer skullId){
         int i = skullService.deleteSkull(skullId);
         if (i==1){
@@ -66,7 +66,7 @@ public class SkullController {
     /*
      * 修改经办人
      * */
-    @RequestMapping("editSkull")
+    @RequestMapping("/editSkull")
     @ResponseBody
     public Object editSkull(Skull skull){
         int i = skullService.editSkull(skull);

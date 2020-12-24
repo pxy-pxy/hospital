@@ -27,7 +27,7 @@ public class DoctorController {
     /*
      * 查询医生
      * */
-    @RequestMapping("/doctorList.do")
+    @RequestMapping("/doctorList")
     @ResponseBody
     public Object doctorList(Doctor doctor, @RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
         PageHelper.startPage(page,limit);
@@ -48,7 +48,7 @@ public class DoctorController {
      /*
      * 添加医生
      * */
-     @RequestMapping("/addDoctor.do")
+     @RequestMapping("/addDoctor")
      @ResponseBody
      public Object addDoctor(Doctor doctor, Paiban paiban){
          int cont = doctorService.count(doctor);
@@ -60,13 +60,13 @@ public class DoctorController {
                  return "添加失败";
              }
          }else{
-             return doctor.getDoctorNamr()+"已存在";
+             return doctor.getDoctorName()+"已存在";
          }
      }
      /*
      * 修改医生
      * */
-     @RequestMapping("/editDoctor.do")
+     @RequestMapping("/editDoctor")
      @ResponseBody
      public Object editDoctor(Doctor doctor){
          int i = doctorService.editDoctor(doctor);
@@ -102,7 +102,7 @@ public class DoctorController {
     /*
      * 查询科室
      * */
-    @RequestMapping("/findAllDepartments.do")
+    @RequestMapping("/findAllDepartments")
     @ResponseBody
     public Object findAllDepartments(){
         List<Departments> allDepartments = doctorService.findAllDepartments();
@@ -111,7 +111,7 @@ public class DoctorController {
     /*
      * 查询类型
      * */
-    @RequestMapping("/findAllRegisteredtype.do")
+    @RequestMapping("/findAllRegisteredtype")
     @ResponseBody
     public Object findAllRegisteredtype(){
         List<Registeredtype> allRegisteredtype = doctorService.findAllRegisteredtype();
