@@ -25,7 +25,7 @@ public class XiangmuPayController {
     //进入项目收费页面
     @RequestMapping("xiangpay")
     public String xiangpay(){
-        return "cao/xiangmupay";
+        return "cao/Cxiangmu";
     }
     //选择患者后对患者的项目进行检查
     @RequestMapping("selxiang")
