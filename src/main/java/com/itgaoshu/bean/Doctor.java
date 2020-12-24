@@ -11,6 +11,17 @@ public class Doctor {
     private Integer registeredId;//挂号id
     private Integer  dstate;//状态
 
+    @Override
+    public String toString() {
+        return "CDoctor{" +
+                "doctorId=" + doctorId +
+                ", doctorName='" + doctorName + '\'' +
+                ", departmentId=" + departmentId +
+                ", registeredId=" + registeredId +
+                ", dstate=" + dstate +
+                '}';
+    }
+
     public Integer getDoctorId() {
         return doctorId;
     }
@@ -51,3 +62,5 @@ public class Doctor {
         this.dstate = dstate;
     }
 }
+
+

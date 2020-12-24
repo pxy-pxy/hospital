@@ -44,7 +44,7 @@
         <div class="navBar layui-side-scroll" id="navBar">
             <ul class="layui-nav layui-nav-tree">
                 <li class="layui-nav-item layui-this">
-                    <a href="javascript:;" data-url="main/main.html"><i class="layui-icon"
+                    <a href="javascript:;" data-url="page/main.html"><i class="layui-icon"
                                                                         data-icon=""></i><cite>后台首页</cite></a>
                 </li>
             </ul>
@@ -100,7 +100,7 @@
         $ = layui.$;
         layer = parent.layer === undefined ? layui.layer : top.layer;
         tab = layui.bodyTab({
-            openTabNum: "5",  //最大可打开窗口数量
+            openTabNum: "50",  //最大可打开窗口数量
             url: "../toTreeLoad"//获取菜单json地址
         });
 
