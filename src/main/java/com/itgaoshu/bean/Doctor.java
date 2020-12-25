@@ -5,11 +5,11 @@ package com.itgaoshu.bean;
  * @create 2020-12-21 17:13
  */
 public class Doctor {
-    private Integer doctorId;//医生id
-    private String doctorName;//医生名字
-    private Integer departmentId;//部门
-    private Integer registeredId;//挂号id
-    private Integer  dstate;//状态
+    private int doctorId;//医生id
+    private String doctorName;//医生姓名
+    private Integer departmentId;//外键科室id
+    private Integer registeredid;//外键类型id
+    private Integer dstate;
 
     @Override
     public String toString() {
@@ -17,16 +17,17 @@ public class Doctor {
                 "doctorId=" + doctorId +
                 ", doctorName='" + doctorName + '\'' +
                 ", departmentId=" + departmentId +
-                ", registeredId=" + registeredId +
+                ", registeredid=" + registeredid +
                 ", dstate=" + dstate +
                 '}';
     }
 
-    public Integer getDoctorId() {
+
+    public int getDoctorId() {
         return doctorId;
     }
 
-    public void setDoctorId(Integer doctorId) {
+    public void setDoctorId(int doctorId) {
         this.doctorId = doctorId;
     }
 
@@ -46,12 +47,12 @@ public class Doctor {
         this.departmentId = departmentId;
     }
 
-    public Integer getRegisteredId() {
-        return registeredId;
+    public Integer getRegisteredid() {
+        return registeredid;
     }
 
-    public void setRegisteredId(Integer registeredId) {
-        this.registeredId = registeredId;
+    public void setRegisteredid(Integer registeredid) {
+        this.registeredid = registeredid;
     }
 
     public Integer getDstate() {
