@@ -13,7 +13,7 @@ public class Doctor {
 
     @Override
     public String toString() {
-        return "CDoctor{" +
+        return "Doctor{" +
                 "doctorId=" + doctorId +
                 ", doctorName='" + doctorName + '\'' +
                 ", departmentId=" + departmentId +
