@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper
 public interface DoctorMapper {
     //查询医生
-    public List<Doctor> doctorList(Doctor doctor);
+    public List<Doctor> doctorList(@Param("registeredid") Doctor doctor);
     //删除
     public int deleteDoctor(Integer doctorId);
     //添加

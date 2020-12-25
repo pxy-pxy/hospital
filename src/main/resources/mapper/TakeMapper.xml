@@ -1,7 +1,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itgaoshu.mapper.TakeMapper">
+<mapper namespace="com.itgaoshu.Mapper.TakeMapper">
     <!--查询所有患者-->
     <select id="sel" resultType="ReportVo">
         SELECT r.reportId,r.reportName,r.carid,r.phone,r.sex,r.age,p.department,d.doctorName,r.price,e.type,r.time,r.users,r.state,e.registeredid dregisteredid,d.doctorid ddoctorid,p.departmentId ddepartmentid

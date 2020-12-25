@@ -1,4 +1,4 @@
-package com.itgaoshu.mapper;
+package com.itgaoshu.Mapper;
 
 import com.itgaoshu.bean.ReportVo;
 import org.apache.ibatis.annotations.Mapper;

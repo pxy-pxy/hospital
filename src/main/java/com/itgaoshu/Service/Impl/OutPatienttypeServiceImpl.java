@@ -4,7 +4,7 @@ import com.itgaoshu.bean.Cashier;
 import com.itgaoshu.bean.Outpatienttype;
 import com.itgaoshu.bean.Pharmacy;
 import com.itgaoshu.bean.ReportVo;
-import com.itgaoshu.mapper.OutpatienttypeMapper;
+import com.itgaoshu.Mapper.OutpatienttypeMapper;
 import com.itgaoshu.service.OutpatienttypeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;

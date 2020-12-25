@@ -27,9 +27,9 @@ public class DoctorController {
     /*
      * 查询医生
      * */
-    @RequestMapping("/doctorList")
+    @RequestMapping("doctorList")
     @ResponseBody
-    public Object doctorList(Doctor doctor, @RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
+    public Object doctorList(Doctor doctor,  Integer page, Integer limit){
         PageHelper.startPage(page,limit);
         List<Doctor> selectAll = doctorService.doctorList(doctor);
         PageInfo pageInfo=new PageInfo(selectAll);
@@ -48,7 +48,7 @@ public class DoctorController {
      /*
      * 添加医生
      * */
-     @RequestMapping("/addDoctor")
+     @RequestMapping("addDoctor")
      @ResponseBody
      public Object addDoctor(Doctor doctor, Paiban paiban){
          int cont = doctorService.count(doctor);
@@ -66,7 +66,7 @@ public class DoctorController {
      /*
      * 修改医生
      * */
-     @RequestMapping("/editDoctor")
+     @RequestMapping("editDoctor")
      @ResponseBody
      public Object editDoctor(Doctor doctor){
          int i = doctorService.editDoctor(doctor);
@@ -82,7 +82,7 @@ public class DoctorController {
     /*
      * 删除医生
      * */
-    @RequestMapping("/deleteDoctor.do")
+    @RequestMapping("deleteDoctor.do")
     @ResponseBody
     public Object deleteDoctor(Integer doctorId){
         int i1 = doctorService.checkCount(doctorId);
@@ -111,7 +111,7 @@ public class DoctorController {
     /*
      * 查询类型
      * */
-    @RequestMapping("/findAllRegisteredtype")
+    @RequestMapping("findAllRegisteredtype")
     @ResponseBody
     public Object findAllRegisteredtype(){
         List<Registeredtype> allRegisteredtype = doctorService.findAllRegisteredtype();

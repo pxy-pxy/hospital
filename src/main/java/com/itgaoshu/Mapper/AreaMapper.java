@@ -2,7 +2,6 @@ package com.itgaoshu.Mapper;
 
 import com.itgaoshu.bean.Area;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

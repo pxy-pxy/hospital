@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.*;
-import com.itgaoshu.mapper.ReportMapper;
+import com.itgaoshu.Mapper.ReportMapper;
 import com.itgaoshu.service.ReportService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -89,15 +89,15 @@ public class ReportServiceImpl implements ReportService {
 
 
     @Override
-    public Integer seltymo(Registeredtype cRegisteredtype) {
+    public Integer seltymo(Registeredtype registeredtype) {
 
-        return reportMapper.seltymo(cRegisteredtype);
+        return reportMapper.seltymo(registeredtype);
     }
     //添加患者
     @Override
-    public Integer addre(Report cReport) {
+    public Integer addre(Report report) {
 
-        return reportMapper.addre(cReport);
+        return reportMapper.addre(report);
     }
     //删除患者
     @Override
@@ -107,15 +107,15 @@ public class ReportServiceImpl implements ReportService {
     }
     //判断正在就诊的患者电话唯一
     @Override
-    public Integer phone(Report cReport) {
+    public Integer phone(Report report) {
 
-        return reportMapper.phone(cReport);
+        return reportMapper.phone(report);
     }
     //判断正在就诊的患者身份证号唯一
     @Override
-    public Integer carid(Report cReport) {
+    public Integer carid(Report report) {
 
-        return reportMapper.carid(cReport);
+        return reportMapper.carid(report);
     }
 
     @Override
@@ -125,9 +125,9 @@ public class ReportServiceImpl implements ReportService {
     }
     //从门诊转入住院
     @Override
-    public Integer zhuanyuan(Report cReport) {
+    public Integer zhuanyuan(Report report) {
 
-        return reportMapper.zhuanyuan(cReport);
+        return reportMapper.zhuanyuan(report);
     }
 
 }

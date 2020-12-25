@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.Checkup;
-import com.itgaoshu.mapper.CheckupMapper;
+import com.itgaoshu.Mapper.CheckupMapper;
 import com.itgaoshu.service.CheckupService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

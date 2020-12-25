@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.ReportVo;
-import com.itgaoshu.mapper.TakeMapper;
+import com.itgaoshu.Mapper.TakeMapper;
 import com.itgaoshu.service.TakeService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,8 @@
-package com.itgaoshu.mapper;
+package com.itgaoshu.Mapper;
 
 import com.itgaoshu.bean.*;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 

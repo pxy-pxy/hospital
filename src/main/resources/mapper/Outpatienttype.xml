@@ -1,7 +1,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itgaoshu.mapper.OutpatienttypeMapper">
+<mapper namespace="com.itgaoshu.Mapper.OutpatienttypeMapper">
     <!--查询所有药品信息-->
     <select id="selout" resultType="Outpatienttype" parameterType="outpatienttype">
         select o.*,u.unitName from outpatienttype o,unit u where o.unit=u.unitId

@@ -1,7 +1,7 @@
 package com.itgaoshu.service.Impl;
 
 import com.itgaoshu.bean.*;
-import com.itgaoshu.mapper.CashierMapper;
+import com.itgaoshu.Mapper.CashierMapper;
 import com.itgaoshu.service.CashierService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
