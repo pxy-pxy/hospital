@@ -474,7 +474,7 @@
             if(layEvent === 'del'){ //删除
                 layer.confirm('真的删除【'+data.projectName+'】这个类别吗', function(index){
                     //向服务端发送删除指令
-                    $.post("prjectType/deleteProjecttype",{projectId:data.projectId},function(res){
+                    $.post("ProjectType/deleteProjecttype",{projectId:data.projectId},function(res){
                         layer.msg(res);
                         //刷新数据 表格
                         tableIns.reload();
@@ -849,7 +849,7 @@
 
         //初始化添加or修改到下拉框中的值
         $.ajax({
-            url: 'ProjectType/ProjecttypeList',
+            url: 'ProjectType/findAllProjecttype1',
             dataType: 'json',
             type: 'post',
             success: function (data) {
@@ -981,7 +981,7 @@
 
         //初始化添加or修改到下拉框中的值
         $.ajax({
-            url: 'ProjectType/ProjecttypeList2',
+            url: 'ProjectType/findAllProjecttype2',
             dataType: 'json',
             type: 'post',
             success: function (data) {

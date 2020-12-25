@@ -82,7 +82,7 @@ public class DoctorController {
     /*
      * 删除医生
      * */
-    @RequestMapping("/deleteDoctor.do")
+    @RequestMapping("/deleteDoctor")
     @ResponseBody
     public Object deleteDoctor(Integer doctorId){
         int i1 = doctorService.checkCount(doctorId);

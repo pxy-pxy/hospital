@@ -30,15 +30,15 @@ public class ProjectTypeController {
      * */
     @RequestMapping("/findAllProjecttype")
     @ResponseBody
-    public Object ProjecttypeList(ProjectType projectType, @RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
+    public Object findAllProjecttype(ProjectType projectType, Integer page, Integer limit){
         PageHelper.startPage(page,limit);
         List<ProjectType> list = projectTypeService.findAllProjecttype(projectType);
         PageInfo pageInfo=new PageInfo(list);
         Map<String ,Object> tableData=new HashMap<>();
         tableData.put("code",0);
         tableData.put("msg","");
-        tableData.put("count",pageInfo.getList());
-        tableData.put("data",pageInfo.getTotal());
+        tableData.put("count",pageInfo.getTotal());
+        tableData.put("data",pageInfo.getList());
 
         return tableData;
     }
@@ -77,9 +77,9 @@ public class ProjectTypeController {
     /*
     * 查询门诊收费项目
     * */
-    @RequestMapping("/OutpatienttypeList")
+    @RequestMapping("/findAllOutpatienttype")
     @ResponseBody
-    public Object OutpatienttypeList(Outpatienttype outpatienttype, @RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
+    public Object findAllOutpatienttype(Outpatienttype outpatienttype, Integer page, Integer limit){
         PageHelper.startPage(page,limit);
         List<Outpatienttype> list = projectTypeService.findAllOutpatienttype(outpatienttype);
         PageInfo pageInfo =new PageInfo(list);
@@ -103,10 +103,10 @@ public class ProjectTypeController {
         return list;
     }
     //查询项目类别
-    @RequestMapping("/ProjecttypeList")
+    @RequestMapping("/findAllProjecttype1")
     @ResponseBody
-    public Object ProjecttypeList(){
-        List<Outpatienttype> list = projectTypeService.findAllOutpatienttype(null);
+    public Object findAllOutpatienttype(){
+        List<ProjectType> list = projectTypeService.findAllProjecttype(null);
         return list;
     }
     /*
@@ -160,7 +160,7 @@ public class ProjectTypeController {
      * */
     @RequestMapping("/findAllInoutpatienttype")
     @ResponseBody
-    public Object findAllInoutpatienttype(Inoutpatienttype inoutpatienttype,@RequestParam(defaultValue = "1",required = true)Integer page,Integer limit){
+    public Object findAllInoutpatienttype(Inoutpatienttype inoutpatienttype,Integer page,Integer limit){
         PageHelper.startPage(page,limit);
         List<Inoutpatienttype> list = projectTypeService.findAllInoutpatienttype(inoutpatienttype);
         PageInfo pageInfo=new PageInfo(list);
@@ -179,18 +179,18 @@ public class ProjectTypeController {
         return list;
     }
     //查询项目类别
-    @RequestMapping("/ProjecttypeList2")
+    @RequestMapping("/findAllProjecttype2")
     @ResponseBody
-    public Object ProjecttypeList2(){
-        List<Outpatienttype> list = projectTypeService.findAllOutpatienttype(null);
+    public Object findAllOutpatienttype1(){
+        List<ProjectType> list = projectTypeService.findAllProjecttype(null);
         return list;
     }
     /*
      * 添加住院收费项
      */
-    @RequestMapping("/addAllInoutpatienttype")
+    @RequestMapping("/addInoutpatienttype")
     @ResponseBody
-    public Object addAllInoutpatienttype(Outpatienttype outpatienttype, Integer projectId, Integer unitId){
+    public Object addInoutpatienttype(Outpatienttype outpatienttype, Integer projectId, Integer unitId){
         outpatienttype.setBigprojectId(projectId);
         outpatienttype.setUnit(unitId);
         int count2 = projectTypeService.count2(outpatienttype);
@@ -205,10 +205,10 @@ public class ProjectTypeController {
             return outpatienttype.getProjectName()+"已存在";
         }
     }
-    //修改门诊收费项
-    @RequestMapping("/editAllInoutpatienttype")
+    //修改住院收费项
+    @RequestMapping("/editInoutpatienttype")
     @ResponseBody
-    public Object editAllInoutpatienttype(Outpatienttype outpatienttype,Integer prepareId ,Integer unitId){
+    public Object editInoutpatienttype(Outpatienttype outpatienttype,Integer prepareId ,Integer unitId){
         outpatienttype.setBigprojectId(prepareId);
         outpatienttype.setUnit(unitId);
         int i = projectTypeService.editOutpatienttype(outpatienttype);
@@ -218,10 +218,10 @@ public class ProjectTypeController {
             return "修改失败";
         }
     }
-    //删除门诊收费项
-    @RequestMapping("/deleteAllInoutpatienttype")
+    //删除住院收费项
+    @RequestMapping("/deleteInoutpatienttype")
     @ResponseBody
-    public Object deleteAllInoutpatienttype(Integer outpatientId){
+    public Object deleteInoutpatienttype(Integer outpatientId){
         int i = projectTypeService.deleteOutpatienttype(outpatientId);
         if(i==1){
             return "删除成功";
@@ -235,7 +235,7 @@ public class ProjectTypeController {
      * */
     @RequestMapping("/findAllMoneytype")
     @ResponseBody
-    public Object MoneytypeList(Moneytype moneytype,@RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
+    public Object findAllMoneytype(Moneytype moneytype, Integer page, Integer limit){
         PageHelper.startPage(page, limit);
         List<Moneytype> listAll = projectTypeService.findAllMoneytype(moneytype);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -302,7 +302,7 @@ public class ProjectTypeController {
      * */
     @RequestMapping("/findAllBed")
     @ResponseBody
-    public Object BedList(Bed bed,@RequestParam(defaultValue = "1",required = true) Integer page, Integer limit){
+    public Object findAllBed(Bed bed, Integer page, Integer limit){
         System.out.println(bed.getBedname());
         PageHelper.startPage(page, limit);
         List<Bed> listAll = projectTypeService.findAllBed(bed);

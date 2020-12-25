@@ -33,7 +33,7 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
-    public int count(Area area) {
-        return areaMapper.count(area);
+    public int count(String name) {
+        return areaMapper.count(name);
     }
 }

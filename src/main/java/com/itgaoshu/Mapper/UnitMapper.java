@@ -11,7 +11,7 @@ public interface UnitMapper {
      * 计量单位增删改查
      * */
 
-    List<Unit> findAddUnit(Unit unit);
+    List<Unit> findAllUnit(Unit unit);
     int addUnit(Unit unit);
     int delete(Integer unitId);
     int count(Unit unit);

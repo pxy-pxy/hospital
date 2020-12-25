@@ -3,6 +3,7 @@ package com.itgaoshu.service.Impl;
 import com.itgaoshu.bean.Unit;
 import com.itgaoshu.Mapper.UnitMapper;
 import com.itgaoshu.service.UnitService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +18,7 @@ public class UnitServiceImpl implements UnitService {
 
     @Override
     public List<Unit> findAddUnit(Unit unit) {
-        return unitMapper.findAddUnit(unit);
+        return unitMapper.findAllUnit(unit);
     }
 
     @Override
