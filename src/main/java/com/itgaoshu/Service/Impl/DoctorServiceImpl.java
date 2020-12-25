@@ -8,13 +8,14 @@ import com.itgaoshu.service.DoctorService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 @Transactional
 public class DoctorServiceImpl implements DoctorService {
 
-
+   @Resource
     private DoctorMapper doctorMapper;
     @Override
     public List<Doctor> doctorList(Doctor doctor) {

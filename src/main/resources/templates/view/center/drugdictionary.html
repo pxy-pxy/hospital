@@ -117,7 +117,7 @@
         //渲染数据表格
         tableIns=table.render({
             elem: '#drugdictionaryTable'   //渲染的目标对象
-            ,url:'drugdictionary/findAllSdrugdictionary' //数据接口
+            ,url:'drugdictionary/findAllDrugdictionary' //数据接口
             ,title: '用户数据表'//数据导出来的标题
             ,toolbar:"#drugdictionaryToolBar"   //表格的工具条
             ,height:'full-200'
@@ -138,7 +138,7 @@
         $("#doSearch").click(function(){
             var params=$("#searchFrm").serialize();
             tableIns.reload({
-                url:"drugdictionary/findAllSdrugdictionary?"+params
+                url:"drugdictionary/findAllDrugdictionary?"+params
             })
         });
 
@@ -157,7 +157,7 @@
             if(layEvent === 'del'){ //删除
                 layer.confirm('真的删除【'+data.drugName+'】这个药品吗', function(index){
                     //向服务端发送删除指令
-                    $.post("drugdictionary/deleteSdrugdictionary",{drugId:data.drugId},function(res){
+                    $.post("drugdictionary/deleteDrugdictionary",{drugId:data.drugId},function(res){
                         layer.msg(res);
                         //刷新数据 表格
                         tableIns.reload();
@@ -180,7 +180,7 @@
                 success:function(index){
                     //清空表单数据
                     $("#dataFrm")[0].reset();
-                    url="drugdictionary/addSdrugdictionary";
+                    url="drugdictionary/addDrugdictionary";
                 }
             });
         }
@@ -193,7 +193,7 @@
                 area:['500px','510px'],
                 success:function(index){
                     form.val("dataFrm",data);
-                    url="drugdictionary/editSdrugdictionary";
+                    url="drugdictionary/editDrugdictionary";
                 }
             });
         }

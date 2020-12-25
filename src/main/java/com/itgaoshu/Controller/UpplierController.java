@@ -58,6 +58,19 @@ public class UpplierController {
             return upplier.getSupplierName()+"已存在";
         }
     }
+    /*
+     * 删除供货单位
+     * */
+    @RequestMapping("/deleteUpplier")
+    @ResponseBody
+    public Object deleteUpplier(Integer supplierId){
+        int i = upplierService.deleteUpplier(supplierId);
+        if(i==1){
+            return "删除成功";
+        }else{
+            return "删除失败";
+        }
+    }
 
 
 }

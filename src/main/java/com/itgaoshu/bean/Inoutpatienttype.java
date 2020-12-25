@@ -2,10 +2,46 @@ package com.itgaoshu.bean;
 //住院收费项目
 public class Inoutpatienttype {
     private Integer inoutpatientId;//序号
-    private String projectName;//类型
-    private  Integer unit;//单位
+    private String pprojectName;//项目大类名
+    private String projectName;//住院收费项
+    private Integer unit;
+    private Integer unitId;
+    private String unitName;
     private  Integer bigproJectId;//项目分类
     private double price;//单价
+    private Integer projectId;
+
+    public String getPprojectName() {
+        return pprojectName;
+    }
+
+    public void setPprojectName(String pprojectName) {
+        this.pprojectName = pprojectName;
+    }
+
+    public Integer getUnitId() {
+        return unitId;
+    }
+
+    public void setUnitId(Integer unitId) {
+        this.unitId = unitId;
+    }
+
+    public String getUnitName() {
+        return unitName;
+    }
+
+    public void setUnitName(String unitName) {
+        this.unitName = unitName;
+    }
+
+    public Integer getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(Integer projectId) {
+        this.projectId = projectId;
+    }
 
     public Integer getInoutpatientId() {
         return inoutpatientId;

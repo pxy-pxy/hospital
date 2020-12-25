@@ -3,17 +3,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.itgaoshu.Mapper.UnitMapper">
- <select id="findAllUnit" resultType="Unit">
-     select * from Unit
-     <where>
-         <if test="unitName!=null and unitName!=''">
-             unitName like concat('%',concat(#{unitName},'%'))
-         </if>
-     </where> order by unitid desc
- </select>
+    <select id="findAllUnit" resultType="Unit">
+        select *from Unit
+        <where>
+            <if test="unitName!=null and unitName!=''">
+                unitName like concat('%',concat(#{unitName},'%'))
+            </if>
+        </where> order by unitid desc
+    </select>
     <insert id="addUnit" parameterType="Unit">
-
-        insert into Unit (unitname) values (#{unitName})
+        insert into Unit(unitName)values(#{unitName})
     </insert>
     <delete id="deleteUnit" parameterType="Integer">
         delete from Unit where unitId=#{unitId}

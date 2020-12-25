@@ -1,22 +1,11 @@
 package com.itgaoshu.bean;
-
-/**
- * @author Tan
- * @create 2020-12-23 10:26
- */
 //门诊收费项目
 public class Outpatienttype {
-    private Integer outpatientId;//序号
+    private  Integer outpatientId;//序号
     private String projectName;//项目名称
     private Integer unit;//单位
     private Integer bigprojectId;//项目分类
-    private double price;//价格
-    private String unitName;//单位
-    private Integer ostate;//项目状态
-    
-
-
-
+    private double price;//单价
 
     public Integer getOutpatientId() {
         return outpatientId;
@@ -57,22 +46,4 @@ public class Outpatienttype {
     public void setPrice(double price) {
         this.price = price;
     }
-
-
-    public String getUnitName() {
-        return unitName;
-    }
-
-    public void setUnitName(String unitName) {
-        this.unitName = unitName;
-    }
-
-    public Integer getOstate() {
-        return ostate;
-    }
-
-    public void setOstate(Integer ostate) {
-        this.ostate = ostate;
-    }
-
 }

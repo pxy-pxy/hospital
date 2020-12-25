@@ -14,5 +14,5 @@ public interface AreaMapper {
     //添加
     int addArea(Area area);
     //查询数目
-    int count(Area area);
+    int count(String name);
 }

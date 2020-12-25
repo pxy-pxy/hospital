@@ -17,6 +17,6 @@
         delete  from Warehuose where warehuoseId=#{warehuoseId}
     </delete>
     <select id="count" resultType="int">
-        select count(*) from Warehuose where supplierName =#{supplierName}
+        select  count(*) from Warehuose where supplierName =#{supplierName}
     </select>
 </mapper>
